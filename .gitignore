@@ -216,3 +216,24 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Project-specific ---------------------------------------------------------
+# Secrets: only .env.example is committed.
+.env
+
+# Local-only working docs (agent instructions, private build plan).
+CLAUDE.md
+docs/BUILD_SPEC.md
+
+# Virtual environment (uv-managed).
+.venv/
+
+# Acquired filings and run artefacts are large and reproducible; keep them
+# out of git but preserve the directory layout with .gitkeep.
+data/raw/*
+!data/raw/.gitkeep
+data/runs/*
+!data/runs/.gitkeep
+
+# data/processed/ and data/gold/ ARE tracked: the gold set and its split
+# assignment are part of the project's evidence and must be reviewable.

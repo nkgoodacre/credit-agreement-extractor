@@ -1,0 +1,29 @@
+# Model registry: the ONLY place model names and prices are defined.
+#
+# Nothing in src/ or in any prompt may hardcode a model name or a per-token
+# price. Prices are USD per million tokens ("mtok") and MUST be filled in
+# from each provider's current pricing page before Phase 5 (see BUILD_SPEC
+# Phase 5). Leaving a price null is intentional: the extraction cost guard
+# should refuse to run rather than silently assume a price.
+
+models:
+  frontier_large:
+    provider: anthropic
+    name: claude-sonnet-5
+    context_window_tokens: 200000
+    input_price_per_mtok: null   # TODO(Phase 5): fill from Anthropic pricing page
+    output_price_per_mtok: null  # TODO(Phase 5): fill from Anthropic pricing page
+
+  frontier_small:
+    provider: anthropic
+    name: claude-haiku-4-5-20251001
+    context_window_tokens: 200000
+    input_price_per_mtok: null   # TODO(Phase 5): fill from Anthropic pricing page
+    output_price_per_mtok: null  # TODO(Phase 5): fill from Anthropic pricing page
+
+  local:
+    provider: ollama
+    name: null                   # TODO(Phase 5): set to the pulled 7B-8B instruct model
+    context_window_tokens: 8192
+    input_price_per_mtok: 0
+    output_price_per_mtok: 0
