@@ -1,5 +1,6 @@
 """The model registry is the single source of truth for model names and
-prices (see CLAUDE.md). This guards its shape so later phases can rely on it.
+prices (see CLAUDE.md). This guards the shape of config/models.yaml (the
+model registry file) so later phases can rely on it.
 """
 
 from __future__ import annotations
@@ -20,6 +21,9 @@ REQUIRED_FIELDS = {
 
 
 def test_models_yaml_has_expected_shape() -> None:
+    """Loads the yaml and ensures the top-level models block has exactly the
+    3 expected keys specified above, and that every one of those entries has
+    the required fields."""
     data = yaml.safe_load(CONFIG_PATH.read_text(encoding="utf-8"))
     assert set(data["models"]) == EXPECTED_KEYS
     for spec in data["models"].values():
