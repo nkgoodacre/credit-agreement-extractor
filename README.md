@@ -32,7 +32,7 @@ uv run ruff format --check .
 uv run mypy src
 ```
 
-Conventions are in `CLAUDE.md`. Design decisions are recorded in
+Design decisions are recorded in
 `docs/DECISIONS.md`.
 
 ## Known limitations (planned v1)
