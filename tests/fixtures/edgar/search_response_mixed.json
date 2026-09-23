@@ -1,0 +1,394 @@
+{
+  "took": 12,
+  "timed_out": false,
+  "hits": {
+    "total": {
+      "value": 10,
+      "relation": "eq"
+    },
+    "max_score": 13.68,
+    "hits": [
+      {
+        "_index": "edgar_file",
+        "_id": "0001213900-22-009497:ea156212ex10-1_kayneanderson.htm",
+        "_score": 13.353001,
+        "_source": {
+          "ciks": [
+            "0001747172"
+          ],
+          "period_ending": "2022-02-18",
+          "file_num": [
+            "814-01363"
+          ],
+          "display_names": [
+            "Kayne Anderson BDC, Inc.  (KBDC)  (CIK 0001747172)"
+          ],
+          "xsl": null,
+          "sequence": 2,
+          "root_forms": [
+            "8-K"
+          ],
+          "file_date": "2022-02-25",
+          "biz_states": [
+            "TX"
+          ],
+          "sics": [],
+          "form": "8-K",
+          "adsh": "0001213900-22-009497",
+          "film_num": [
+            "22681348"
+          ],
+          "biz_locations": [
+            "Houston, TX"
+          ],
+          "file_type": "EX-10.1",
+          "file_description": "SENIOR SECURED REVOLVING CREDIT AGREEMENT",
+          "inc_states": [
+            "DE"
+          ],
+          "items": [
+            "8.01",
+            "9.01"
+          ]
+        }
+      },
+      {
+        "_index": "edgar_file",
+        "_id": "0001193125-22-015950:d293121dex101.htm",
+        "_score": 13.679924,
+        "_source": {
+          "ciks": [
+            "0001756761"
+          ],
+          "period_ending": "2022-01-18",
+          "file_num": [
+            "333-254931"
+          ],
+          "display_names": [
+            "Invesco Real Estate Income Trust Inc.  (CIK 0001756761)"
+          ],
+          "xsl": null,
+          "sequence": 2,
+          "root_forms": [
+            "8-K"
+          ],
+          "file_date": "2022-01-24",
+          "biz_states": [
+            "GA"
+          ],
+          "sics": [
+            "6798"
+          ],
+          "form": "8-K",
+          "adsh": "0001193125-22-015950",
+          "film_num": [
+            "22549019"
+          ],
+          "biz_locations": [
+            "Atlanta, GA"
+          ],
+          "file_type": "EX-10.1",
+          "file_description": "EX-10.1",
+          "inc_states": [
+            "MD"
+          ],
+          "items": [
+            "1.01",
+            "3.02",
+            "9.01"
+          ]
+        }
+      },
+      {
+        "_index": "edgar_file",
+        "_id": "0000950157-22-000211:ex10-1.htm",
+        "_score": 13.398581,
+        "_source": {
+          "ciks": [
+            "0000750004"
+          ],
+          "period_ending": "2022-02-25",
+          "file_num": [
+            "001-11693"
+          ],
+          "display_names": [
+            "SCIENTIFIC GAMES CORP  (LNW, LAWIL)  (CIK 0000750004)"
+          ],
+          "xsl": null,
+          "sequence": 2,
+          "root_forms": [
+            "8-K"
+          ],
+          "file_date": "2022-03-01",
+          "biz_states": [
+            "NV"
+          ],
+          "sics": [
+            "7373"
+          ],
+          "form": "8-K",
+          "adsh": "0000950157-22-000211",
+          "film_num": [
+            "22699520"
+          ],
+          "biz_locations": [
+            "Las Vegas, NV"
+          ],
+          "file_type": "EX-10.1",
+          "file_description": "AMENDMENT NO. 9",
+          "inc_states": [
+            "NV"
+          ],
+          "items": [
+            "1.01",
+            "8.01",
+            "9.01"
+          ]
+        }
+      },
+      {
+        "_index": "edgar_file",
+        "_id": "0001213900-22-006475:ea155302ex10-2_digerati.htm",
+        "_score": 13.13043,
+        "_source": {
+          "ciks": [
+            "0001014052"
+          ],
+          "period_ending": "2022-02-04",
+          "file_num": [
+            "001-15687"
+          ],
+          "display_names": [
+            "Digerati Technologies, Inc.  (DTGI)  (CIK 0001014052)"
+          ],
+          "xsl": null,
+          "sequence": 6,
+          "root_forms": [
+            "8-K"
+          ],
+          "file_date": "2022-02-10",
+          "biz_states": [
+            "TX"
+          ],
+          "sics": [
+            "7374"
+          ],
+          "form": "8-K",
+          "adsh": "0001213900-22-006475",
+          "film_num": [
+            "22615061"
+          ],
+          "biz_locations": [
+            "San Antonio, TX"
+          ],
+          "file_type": "EX-10.2",
+          "file_description": "JOINDER AND SECOND AMENDMENT TO CREDIT AGREEMENT BY AND AMONG T3 COMMUNICATIONS, INC., THE SUBSIDIARIES OF T3 COMMUNICATIONS (INCLUDING NEXT LEVEL INTERNET, INC.), POST ROAD ADMINISTRATIVE LLC, AND POST ROAD SPECIAL OPPORTUNITY FUND II LP",
+          "inc_states": [
+            "NV"
+          ],
+          "items": [
+            "1.01",
+            "2.01",
+            "2.03",
+            "8.01",
+            "9.01"
+          ]
+        }
+      },
+      {
+        "_index": "edgar_file",
+        "_id": "0001193125-22-054424:d281783d8k.htm",
+        "_score": 13.330982,
+        "_source": {
+          "ciks": [
+            "0000864270"
+          ],
+          "period_ending": "2022-02-25",
+          "file_num": [
+            "001-36111"
+          ],
+          "display_names": [
+            "AMERICAN HONDA FINANCE CORP  (CIK 0000864270)"
+          ],
+          "xsl": null,
+          "sequence": 1,
+          "root_forms": [
+            "8-K"
+          ],
+          "file_date": "2022-02-25",
+          "biz_states": [
+            "CA"
+          ],
+          "sics": [
+            "6141"
+          ],
+          "form": "8-K",
+          "adsh": "0001193125-22-054424",
+          "film_num": [
+            "22680148"
+          ],
+          "biz_locations": [
+            "Torrance, CA"
+          ],
+          "file_type": "8-K",
+          "file_description": "8-K",
+          "inc_states": [
+            "CA"
+          ],
+          "items": [
+            "1.01",
+            "1.02",
+            "2.03",
+            "9.01"
+          ]
+        }
+      },
+      {
+        "_index": "edgar_file",
+        "_id": "0000930413-22-000112:c102878_ex99-1.htm",
+        "_score": 13.277111,
+        "_source": {
+          "ciks": [
+            "0000050725"
+          ],
+          "period_ending": "2022-01-24",
+          "file_num": [
+            "001-06620"
+          ],
+          "display_names": [
+            "GRIFFON CORP  (GFF)  (CIK 0000050725)"
+          ],
+          "xsl": null,
+          "sequence": 2,
+          "root_forms": [
+            "8-K"
+          ],
+          "file_date": "2022-01-28",
+          "biz_states": [
+            "NY"
+          ],
+          "sics": [
+            "3442"
+          ],
+          "form": "8-K",
+          "adsh": "0000930413-22-000112",
+          "film_num": [
+            "22565430"
+          ],
+          "biz_locations": [
+            "New York, NY"
+          ],
+          "file_type": "EX-99.1",
+          "file_description": null,
+          "inc_states": [
+            "DE"
+          ],
+          "items": [
+            "1.01",
+            "2.01",
+            "2.03",
+            "9.01"
+          ]
+        }
+      },
+      {
+        "_index": "edgar_file",
+        "_id": "0001564590-22-001206:amk-ex101_15.htm",
+        "_score": 13.393267,
+        "_source": {
+          "ciks": [
+            "0001591587"
+          ],
+          "period_ending": "2022-01-12",
+          "file_num": [
+            "001-38980"
+          ],
+          "display_names": [
+            "AssetMark Financial Holdings, Inc.  (AMK)  (CIK 0001591587)"
+          ],
+          "xsl": null,
+          "sequence": 2,
+          "root_forms": [
+            "8-K"
+          ],
+          "file_date": "2022-01-13",
+          "biz_states": [
+            "CA"
+          ],
+          "sics": [
+            "6282"
+          ],
+          "form": "8-K",
+          "adsh": "0001564590-22-001206",
+          "film_num": [
+            "22529182"
+          ],
+          "biz_locations": [
+            "Concord, CA"
+          ],
+          "file_type": "EX-10.1",
+          "file_description": "AMENDED AND RESTATED CREDIT AGREEMENT",
+          "inc_states": [
+            "DE"
+          ],
+          "items": [
+            "1.01",
+            "2.03",
+            "9.01"
+          ]
+        }
+      },
+      {
+        "_index": "edgar_file",
+        "_id": "0001999999-21-000123:ex10-1_before_cutoff.htm",
+        "_score": 10.0,
+        "_source": {
+          "ciks": [
+            "0001999001"
+          ],
+          "display_names": [
+            "Pre-LIBOR-Cutoff Corp  (CIK 0001999001)"
+          ],
+          "form": "8-K",
+          "file_date": "2021-11-15",
+          "file_type": "EX-10.1",
+          "file_description": "CREDIT AGREEMENT"
+        }
+      },
+      {
+        "_index": "edgar_file",
+        "_id": "0001999999-22-000456:ex10-1_wrong_form.htm",
+        "_score": 10.0,
+        "_source": {
+          "ciks": [
+            "0001999002"
+          ],
+          "display_names": [
+            "Wrong Form Corp  (CIK 0001999002)"
+          ],
+          "form": "S-1",
+          "file_date": "2022-05-01",
+          "file_type": "EX-10.1",
+          "file_description": "CREDIT AGREEMENT"
+        }
+      },
+      {
+        "_index": "edgar_file",
+        "_id": "0001999999-22-000789:ex10-1_scanned.pdf",
+        "_score": 10.0,
+        "_source": {
+          "ciks": [
+            "0001999003"
+          ],
+          "display_names": [
+            "Scanned PDF Corp  (CIK 0001999003)"
+          ],
+          "form": "10-K",
+          "file_date": "2022-06-01",
+          "file_type": "EX-10.1",
+          "file_description": "CREDIT AGREEMENT"
+        }
+      }
+    ]
+  }
+}

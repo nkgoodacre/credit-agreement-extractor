@@ -40,6 +40,13 @@ Design decisions are recorded in
 - Only the initial financial-covenant threshold is captured; step-downs are ignored.
 - Per-facility pricing margins are collapsed into a single min/max range.
 - Multi-borrower structures record the lead borrower only.
+- Amendments, waivers and joinders are deliberately excluded from
+  acquisition (`cae fetch`) and not linked back to their base agreement.
+  Only the base credit agreement's own terms are captured, as filed --
+  not how those terms changed afterward. Tracking amendment history
+  properly (linking amendments to a base agreement and applying changes
+  chronologically) is a materially different feature, not a tweak to the
+  current single-document schema, and is a candidate for future work.
 
 This is a portfolio and research project, not production software. The
 README describes the controls the pipeline has and the ones it lacks.

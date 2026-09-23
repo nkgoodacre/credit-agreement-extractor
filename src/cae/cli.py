@@ -1,15 +1,23 @@
 """Command-line entry point for ``cae``.
 
-Every subcommand here is a Phase 0 placeholder: it parses arguments and
-reports that the underlying phase is not yet implemented. Real behaviour is
-added phase by phase (see ``docs/BUILD_SPEC.md``). Keeping the CLI surface
-fixed from the start means downstream phases only fill in bodies, and the
-``--help`` contract stays stable for tests and documentation.
+`fetch` is implemented (Phase 1); the remaining subcommands are still
+Phase 0 placeholders that parse arguments and report the phase is not yet
+built. Real behaviour is added phase by phase (see ``docs/BUILD_SPEC.md``).
+Keeping the CLI surface fixed from the start means downstream phases only
+fill in bodies, and the ``--help`` contract stays stable for tests and
+documentation.
 """
 
 from __future__ import annotations
 
+import os
+from pathlib import Path
+
 import typer
+from dotenv import load_dotenv
+
+from cae.edgar.client import EdgarClient
+from cae.edgar.fetch import fetch_candidates
 
 app = typer.Typer(
     add_completion=False,
@@ -19,14 +27,40 @@ app = typer.Typer(
 
 _NOT_IMPLEMENTED = "This command is a Phase 0 placeholder and is not implemented yet."
 
+RAW_DIR = Path("data/raw")
+MANIFEST_PATH = RAW_DIR / "manifest.csv"
+SKIP_LOG_PATH = RAW_DIR / "skip_log.csv"
+
 
 @app.command()
 def fetch(
     limit: int = typer.Option(300, help="Maximum number of candidate documents to download."),
 ) -> None:
-    """Acquire candidate credit agreements from SEC EDGAR (Phase 1)."""
-    typer.echo(_NOT_IMPLEMENTED)
-    raise typer.Exit(code=1)
+    """Acquire candidate credit agreements from SEC EDGAR."""
+    load_dotenv()
+    user_agent = os.environ.get("SEC_USER_AGENT")
+    if not user_agent or user_agent == "Your Name your@email.com":
+        typer.echo(
+            "SEC_USER_AGENT is not set. Copy .env.example to .env and set a real, "
+            "descriptive User-Agent (EDGAR requires one; see .env.example)."
+        )
+        raise typer.Exit(code=1)
+
+    with EdgarClient(user_agent=user_agent) as client:
+        summary = fetch_candidates(
+            client=client,
+            raw_dir=RAW_DIR,
+            manifest_path=MANIFEST_PATH,
+            skip_log_path=SKIP_LOG_PATH,
+            limit=limit,
+        )
+
+    typer.echo(
+        f"Downloaded {summary.downloaded}, skipped {summary.skipped}, "
+        f"failed {summary.failed}. Manifest: {MANIFEST_PATH}"
+    )
+    if summary.downloaded == 0:
+        raise typer.Exit(code=1)
 
 
 @app.command()
